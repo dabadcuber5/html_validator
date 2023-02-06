@@ -34,15 +34,15 @@ def validate_html(html):
     index = 0
     while index < len(tags) and balanced:
         tag = tags[index]
-        nameTags = tags[1: -1]
+        name_tags = tags[1: -1]
         if '/' not in tag:
-            stack_tag.append(nameTags)
+            stack_tag.append(name_tags)
         else:
             if not stack_tag:
                 balanced = False
             else:
                 top = stack_tag.pop()
-                if not top == nameTags[1:]:
+                if not top == name_tags[1:]:
                     balanced = False
         index += 1
     if balanced and not stack_tag:
