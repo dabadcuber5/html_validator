@@ -16,7 +16,7 @@ You will implement an extended version of the balanced parentheses algorithm tha
 
 HTML is how webpages format their content.
 A simple example is the following code:
-
+shiver me timbers!!!!
 ```
 Data structures is <strong>the best</strong>!
 ```
