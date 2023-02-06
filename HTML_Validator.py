@@ -24,7 +24,7 @@ def validate_html(html):
     # code from class will be that you will have to
     # keep track of not just the 3 types of parentheses,
     # but arbitrary text located between the html tags
-    if(len(html) == 0):
+    if len(html) == 0:
         return True
     tags = _extract_tags(html)
     if not tags:
