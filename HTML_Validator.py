@@ -34,21 +34,25 @@ def validate_html(html):
     index = 0
     while index < len(tags) and balanced:
         tag = tags[index]
-        name_tags = tags[1: -1]
         if '/' not in tag:
-            stack_tag.append(name_tags)
+            stack_tag.append(tag)
         else:
             if not stack_tag:
                 balanced = False
             else:
                 top = stack_tag.pop()
-                if not top == name_tags[1:]:
+                if not _match(top, tag):
                     balanced = False
         index += 1
     if balanced and not stack_tag:
         return True
     else:
         return False
+
+
+def _match(str1, str2):
+    str1, str2 = str1.replace('/', ""), str2.replace('/', "")
+    return str1 == str2
 
 
 def _extract_tags(html):
